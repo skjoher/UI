@@ -1,0 +1,211 @@
+@charset 'utf8';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,600,700');
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+/* @import '../../node_modules/bulma'; */
+
+/* $blue: #13EBFF
+$green: #6CEFBD
+$red: #FF7080
+$yellow: #FFE28B
+
+$text: #8793A2
+$text-light: #C0C4C7
+$border: #D2D6DA */
+
+/* $upload-box-background: #2C3139
+$upload-box-header-background: #3A414A
+$upload-box-progress-background: #3A4048 */
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+body {
+  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #8793A2;
+}
+  
+
+.hero {
+  background: transparent;
+}
+
+.upload-box{
+  width: 100%;
+  height: auto;
+  display: inline-blue;
+  border-radius: 10px;
+  background: #F5F5F5;
+  justify-content: space-between;
+}
+
+  .upload-box-header{
+    width: 100%;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    .gh-icon{
+      padding-right: 15px;
+    }
+
+      i{
+        font-size: 24px;
+        color: #8793A2;
+        margin-right: 5px;
+        margin-left: 36px;
+        cursor: pointer;
+      }
+
+  .upload-box-content
+
+    .upload-item, .drop-container{
+      width: 100%;
+      height: 140px;
+      box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.6);
+    }
+
+    .drop-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+      // p{
+      //   font-size: 16px;
+      //   font-weight: 400;
+      //   color: #8793A2;
+      // }
+
+      .upload-button{
+        display: inline-block;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 0 2px;
+      }
+
+        input{
+          display: none;
+        }
+    .upload-item{
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+      .upload-item-content{
+        width: 100%;
+      }
+
+        .filename{
+          display: flex;
+          align-items: center;
+        }
+
+          // i{
+          //   color: #8793A2;
+          //   opacity: .8;
+          //   font-size: 24px;
+          //   margin-right: 12px;
+          // }
+
+          // span{
+          //   color: #8793A2;
+          //   font-size: 14px;
+          //   font-weight: 400;
+          // }
+
+        .progress-content{
+          display: flex;
+          align-items: center;
+          margin: 10px 30px;
+        }
+
+          .progress{
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 12px;
+            border-radius: 10px;
+            background: rgb(233, 241, 248);
+          }
+
+            .bar{
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 12px;
+              background: linear-gradient(90deg, rgb(2, 2, 121) 0%, rgb(0, 119, 255) 100%);
+            }
+
+              .is-done{
+                background: #2B66C3;
+              }
+
+        .progress-text-content{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 10px 30px 0;
+        }
+
+          .progress-text{
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(4, 158, 81, 0.931);
+            background: rgb(250, 250, 250);
+            transition: color 200ms ease-out;
+          }
+
+            .is-done{
+              color: rgba(4, 158, 81, 0.931);
+            }
+
+          .speed-and-eta-text{
+            font-size: 13px;
+            font-weight: 600;
+            color: #2B66C3;
+          }
+
+  .help-text{
+    width: 100%;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 12px;
+    color: #8793A2;
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.6);
+  }
+
+    span{
+      display: block;
+      text-align: center;
+      margin: 5px 0;
+    }
+
+      img{
+        display: block;
+        width: 30px;
+        margin: 0 auto 5px auto;
+      }
+
+.header-title{
+  position: absolute;
+
+}
+
+  .h2{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+  } 

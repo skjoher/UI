@@ -5,7 +5,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
-import { UploadComponent } from './upload/upload.component';
+// import { UploadComponent } from './upload/upload.component';
+import { UploadModule } from './upload/upload.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -17,10 +18,11 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     DashboardModule,
     MiscellaneousModule,
+    UploadModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,
-    UploadComponent,
+    // UploadComponent,
   ],
 })
 export class PagesModule {
