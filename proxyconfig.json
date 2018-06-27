@@ -1,0 +1,7 @@
+{
+        "/bs": {
+            "target": "http://localhost:3179",
+            "secure": false,
+            "changeOrigin": true
+        }
+}

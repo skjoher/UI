@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ThemeModule } from '../../@theme/theme.module';
 import { UploadComponent } from './upload.component';
 
-import { NgxUploaderModule } from 'ngx-uploader';
+import { NgUploaderModule } from '../ngx-uploader/module/ngx-uploader.module';
 
 @NgModule({
   imports: [
@@ -11,7 +11,7 @@ import { NgxUploaderModule } from 'ngx-uploader';
     ThemeModule,
     
     //Feature
-    NgxUploaderModule,
+    NgUploaderModule,
   ],
   declarations: [
     UploadComponent,

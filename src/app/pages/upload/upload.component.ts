@@ -1,5 +1,5 @@
-import { Component, EventEmitter, NgModule } from '@angular/core';
-import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions } from 'ngx-uploader';
+import { Component, EventEmitter, NgModule, Output } from '@angular/core';
+import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions } from '../ngx-uploader';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class UploadComponent {
   dragOver: boolean;
 
   constructor() { 
-    this.options = { concurrency: 1, maxUploads: 10 };
+    // this.options = { concurrency: 10, maxUploads: 10 };
     this.files = []; // local uploading files array
     this.uploadInput = new EventEmitter<UploadInput>(); // input events, we use this to emit data to ngx-uploader
     this.humanizeBytes = humanizeBytes
@@ -28,10 +28,17 @@ export class UploadComponent {
       // uncomment this if you want to auto upload files when added
       const event: UploadInput = {
         type: 'uploadAll',
-        url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+        // url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+        url: '/bs/camli/upload',
         method: 'POST',
-        data: { foo: 'bar' }
+        data: { foo: 'bar' },
       };
+      // var reader = new FileReader();
+      // reader.readAsText(output.file.nativeFile);
+      // reader.onload = function(){
+      //   console.log(reader.result);
+      // }
+
       this.uploadInput.emit(event);
     } else if (output.type === 'addedToQueue'  && typeof output.file !== 'undefined') { // add file to array when added
       this.files.push(output.file);
